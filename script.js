@@ -71,3 +71,8 @@ console.log(comparAge);
 
 */
 
+const ageNow = 2050
+const ageAjit = ageNow -1995
+const ageShaila = ageNow -1969
+
+console.log(ageNow -1995 > ageNow -2018);
