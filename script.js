@@ -71,8 +71,26 @@ console.log(comparAge);
 
 */
 
-const ageNow = 2050
-const ageAjit = ageNow -1995
-const ageShaila = ageNow -1969
+// const ageNow = 2050
+// const ageAjit = ageNow -1995
+// const ageShaila = ageNow -1969
+// // math operator first than comparison
+// console.log(ageNow -1995 > ageNow -2018);
 
-console.log(ageNow -1995 > ageNow -2018);
+const firstName = 'Jonas'
+const job = 'teacher'
+const birthYear = 1991
+const year = 2034
+
+const jonas = "I'm " + firstName + ',a ' +(year - birthYear) +' years old' + job + '!';
+
+console.log(jonas);
+
+const jonasNew = `I'm ${firstName}, a ${year - birthYear} years old ${job} !`
+console.log(jonasNew);
+
+console.log(`hey i am ${job}`);
+
+console.log(`lorem6
+adfsdfs
+asdfasdf`);
