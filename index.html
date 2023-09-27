@@ -1,21 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS Basics</title>
     <style>
-        .main-div{
+        .main-div {
             width: 100%;
-            height: 200px;
-            background-color: #503bf2;
+            height: 300px;
+            background-color: dodgerblue;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .form{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
         }
     </style>
 </head>
+
 <body>
     <div class="main-div">
-        <h1>Hello fundamentals</h1>
+        <h4>Hello fundamentals</h4>
+        <h2>Fruit Processor</h2>
+       <div class="form">
+        <form>
+            <label for="apples">Number of apples: </label>
+            <input type="number" id="apples" name="apples">
+            <br>
+            <label for="orange">Number of oranges: </label>
+            <input type="number" id="oranges" name="oranges">
+            <br>
+            <button type="button" onclick="calculatePiecesToCut()">Calculate Juice</button>
+        </form>
+        <div id="result"></div>
+       </div>
     </div>
     <script src="./script.js"></script>
 </body>
+
 </html>

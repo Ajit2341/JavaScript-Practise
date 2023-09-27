@@ -177,3 +177,69 @@ const calcAge2 =function calcAge(birthYear){
 const age2 = calcAge2(1995)
 console.log(`age from age1 function ${age1} and age2 from the anonymous funtion ${age2}`);
 */
+
+/*
+
+//arrow functions
+
+const calcAge2 =function calcAge(birthYear){
+    return 2023 - birthYear;
+}
+
+const calcAge3 = birthYear => 2023 - birthYear
+
+const age3 = calcAge3(1995)
+console.log(age3);
+
+const yearsUntilRetirement = (birthYear, firsName) => {
+    const age = 2023 - birthYear;
+    const retiredAfter = 60 - age;
+    return retiredAfter;
+}
+
+const retireAge = yearsUntilRetirement(1995)
+console.log(`I will retire after ${retireAge} years of working`);
+
+const yearsUntilRetirement1 = (birthYear, firsName) => {
+    const age = 2023 - birthYear;
+    const retiredAfter = 60 - age;
+    return `${firsName} will retire after ${retiredAfter} years now!!`;
+}
+
+const retireAge1 = yearsUntilRetirement1(1992, 'Linesh')
+console.log(retireAge1);
+
+*/
+
+
+//function inside the function
+
+const cutPieces = function(fruit){
+    return fruit * 4;
+}
+
+function fruitProccessor (apples, oranges){
+    console.log(`apple fruit passed ${apples} and orange fruit passed ${oranges}`);
+
+    const applePieces = cutPieces(apples)
+    const orangePieces = cutPieces(oranges)
+
+    const juice = `Juice with ${applePieces} apples and ${orangePieces} orange`
+    return juice;
+}
+
+function calculatePiecesToCut(){
+    // console.log(`apple fruit passed ${apples} and orange fruit passed ${oranges}`);
+    const apples = parseInt(document.getElementById('apples').value)
+    const oranges = parseInt(document.getElementById('oranges').value)
+
+    const applePieces = cutPieces(apples)
+    const orangePieces = cutPieces(oranges)
+
+    const juice = `Juice with ${applePieces} apples and ${orangePieces} orange`
+   // return juice;
+   document.getElementById('result').innerText = juice
+}
+
+const juiceToDrink = fruitProccessor(5, 10)
+console.log(juiceToDrink);
