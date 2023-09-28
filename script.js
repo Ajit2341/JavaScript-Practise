@@ -247,6 +247,7 @@ console.log(juiceToDrink);
 
 //Arrays
 
+/*
 const people = ['Linda', 'Dp', 'Vinit', 'Jay']
 console.log(people);
 
@@ -336,3 +337,70 @@ if (people.includes('Peter')){
     console.log('dont have any friends in array');
 }
 
+*/
+
+//objects
+/*
+const student={
+
+    firstName: 'Ajit',
+    lastName: 'Auti',
+    age: 2023 - 1995,
+    does: 'coding',
+    friends: ['vilas','ajay', 'jay']
+}
+
+console.log(student);
+
+console.log(student.does);
+
+const nameKey = 'Name';
+
+console.log(student['first'+nameKey]);
+
+const interestedData = prompt('what do you want to know about the student: firstname, lastname, age, does, friends')
+
+
+if (student[interestedData]){
+    console.log(student[interestedData]);
+} else {
+    console.log('input value is not present in object');
+}
+
+console.log(`${student.firstName} has ${student.friends.length} friends, his best friend is ${student.friends[1]}`)
+
+*/
+
+// function that is attached to an object is a method
+const student=
+{
+
+    firstName: 'Ajit',
+    lastName: 'Auti',
+    birthYear: 1995,
+    does: 'coding',
+    friends: ['vilas','ajay', 'jay'],
+    hasDrivingLicence: true, 
+    calcAge: function(){
+        console.log(this);
+        return 2023 - this.birthYear;
+    }
+}
+const student2=
+{
+
+    firstName: 'Prajkta',
+    lastName: 'Auti',
+    birthYear: 1993,
+    does: 'coding',
+    friends: ['poo','jay', 'rutu'],
+    hasDrivingLicence: true, 
+    calcAge: function(){
+        return 2023 - this.birthYear;
+    }
+}
+
+console.log(student.calcAge()); 
+console.log(student2.calcAge()); 
+
+// console.log(student['calcAge'](1995));
