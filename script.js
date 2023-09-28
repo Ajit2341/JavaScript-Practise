@@ -213,7 +213,7 @@ console.log(retireAge1);
 
 
 //function inside the function
-
+/*
 const cutPieces = function(fruit){
     return fruit * 4;
 }
@@ -243,3 +243,96 @@ function calculatePiecesToCut(){
 
 const juiceToDrink = fruitProccessor(5, 10)
 console.log(juiceToDrink);
+*/
+
+//Arrays
+
+const people = ['Linda', 'Dp', 'Vinit', 'Jay']
+console.log(people);
+
+const years = new Array(1991,2004,2008,2020);
+//console.log(years);
+
+//console.log(people[0]);
+
+//console.log(people.length);
+
+console.log(people[people.length -1]);
+
+people[2] = 'Bandu'
+console.log(people)
+
+const ajit = ['ajit', 'auti', 21]
+console.log(ajit);
+
+const lastName = 'patil'
+const ajit2 = ['ajit', lastName, 21, people]
+console.log(ajit2);
+
+//exercise
+// we have a array of birthyear and we want to calculte their ages
+
+const calcAge2 =function calcAge(birthYear){
+    return 2023 - birthYear;
+}
+
+const yearNew = [1990,1969,1964,1995,1993]
+
+// console.log(calcAge2(yearNew));
+
+console.log(calcAge2(yearNew[2]));
+
+console.log(calcAge2(yearNew[yearNew.length -1]));
+
+const age1 = calcAge2(yearNew[3])
+console.log(age1);
+
+const ages = [calcAge2(yearNew[1]),calcAge2(yearNew[2]),calcAge2(yearNew[yearNew.length -1])]
+console.log(ages);
+
+const newLength = people.push('ajit')
+console.log(people);
+console.log(newLength);
+
+document.addEventListener("DOMContentLoaded", function(){
+    document.getElementById("demo").innerHTML = people.toString();
+})
+
+//add elt at first place
+people.unshift('Ray')
+console.log(people);
+
+// removes last elements
+people.pop();
+
+// popped will give the element removed from array and the last element will be removed
+const popped = people.pop();
+console.log(people);
+console.log(popped);
+
+// shift will remove the first element and shifted will give the element removed
+const shifted = people.shift()
+console.log(people);
+console.log(shifted);
+
+console.log(people.indexOf('Dp'));  // OP 1
+console.log(people.indexOf('Jay')); // OP -1 (element not in array)
+
+// includes uses strict equality operator so type must me same
+console.log(people.includes('Jay'));
+console.log(people.includes('Dp'));
+
+people.push(23)
+
+console.log(`modified array to check includes ${people}`);
+console.log(`modified array to check includes value ${people.includes('23')}`);
+console.log(`modified array to check includes value when its a number is: ${people.includes(23)}`);
+
+if (people.includes('Peter')){
+    console.log(` You have a friend called Peter`);
+}else if (people.includes('Linda')){
+    console.log(` You have a friend called Linda`);
+}else {
+    console.log('dont have any friends in array');
+}
+
