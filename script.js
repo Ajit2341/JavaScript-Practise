@@ -465,3 +465,116 @@ console.log(student2.getSummary());
 //         console.log('Loop is ending value 6');    }
 // }
 
+const temperture = [3,-2,-6,-1,'error', 9,13,17,15,9,5]
+
+//find temp amplitude = diff highesht temp - lowest tmp
+
+// let maxTemp = Number.NEGATIVE_INFINITY;
+// let minTemp = Number.POSITIVE_INFINITY;
+// //const tempAmplitude = Number.POSITIVE_INFINITY;
+
+
+// for (let i = 0; i <temperture.length; i++){
+//     const currentTemp =  temperture[i]
+
+//     if (typeof currentTemp === 'number' && currentTemp > maxTemp){
+//         maxTemp = currentTemp
+//     }
+//     if (typeof currentTemp === 'number' && currentTemp < minTemp){
+//         minTemp = currentTemp
+//     }
+// }
+
+
+// const tempAmplitude = maxTemp - minTemp;
+// console.log(maxTemp);
+// console.log(minTemp);
+// console.log(tempAmplitude);
+
+
+
+/*
+
+const calcTempAmplitude = function(temps) {
+    let max = temps[0];
+    let min = temps[0];
+
+    for( let i = 0; i < temps.length; i++){
+
+        const currentTemp = temps[i];
+
+        if(typeof currentTemp !== 'number') continue;
+
+        if (currentTemp > max){
+            max = currentTemp;
+        } 
+      
+        if (currentTemp < min){
+            min = currentTemp;
+        } 
+     
+    }
+
+    const tempA = max - min;
+    return tempA;
+}
+
+console.log(calcTempAmplitude(temperture))
+
+*/
+
+// function now receive 2 arrays with temps
+// // merge two arrays 
+// const tempertureNew = [6,-7,-4,-6,'error', 11,13,17,15,20,5]
+// const calcTempAmplitude = function(t1,t2) {
+//     const temps = t1.concat(t2);
+//     let max = temps[0];
+//     let min = temps[0];
+
+//     for( let i = 0; i < temps.length; i++){
+
+//         const currentTemp = temps[i];
+
+//         if(typeof currentTemp !== 'number') continue;
+
+//         if (currentTemp > max){
+//             max = currentTemp;
+//         } 
+      
+//         if (currentTemp < min){
+//             min = currentTemp;
+//         } 
+     
+//     }
+
+//     const tempA = max - min;
+//     return tempA;
+// }
+
+// console.log(calcTempAmplitude(temperture,tempertureNew))
+
+const data1 = [17, 21 ,23]
+
+// const printForcast = function(arr){
+
+//     for(let i = 0; i <= arr.length; i++){
+//         const currentTemp =  arr[i];
+//         const day = i +1;
+
+//         const tempString = `${currentTemp} in ${day} day,`
+//     }
+//  return tempString
+// }
+
+
+// const printForcast2 = function(arr){
+//     let str = ''
+//     for(let i = 0; i < arr.length; i++){
+//        str += `... ${arr[i]} C in ${i} days `
+//     }
+
+//     return str
+// }
+
+// const tempStr = printForcast2(data1);
+// console.log(tempStr);
