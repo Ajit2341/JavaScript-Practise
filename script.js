@@ -370,8 +370,10 @@ if (student[interestedData]){
 console.log(`${student.firstName} has ${student.friends.length} friends, his best friend is ${student.friends[1]}`)
 
 */
+//object methods
 
 // function that is attached to an object is a method
+/*
 const student=
 {
 
@@ -394,13 +396,72 @@ const student2=
     birthYear: 1993,
     does: 'coding',
     friends: ['poo','jay', 'rutu'],
-    hasDrivingLicence: true, 
+    hasDrivingLicence: false, 
+    // calcAge: function(){
+    //     return 2023 - this.birthYear;
+    // }
     calcAge: function(){
-        return 2023 - this.birthYear;
+        this.age = 2023 - this.birthYear;
+        return this.age;
+    },
+    getSummary: function(){
+        return `${this.firstName} is a ${this.age} years old person, she has ${this.hasDrivingLicence ? 'a' : 'no' }  driving licence `
     }
 }
 
 console.log(student.calcAge()); 
 console.log(student2.calcAge()); 
+console.log(student2)
+console.log(student2.age);
 
+// console.log(`${student2.firstName} is a ${student2.age} years old person, he has a driving licence ${student2.hasDrivingLicence}`);
+
+
+console.log(student2.getSummary());
 // console.log(student['calcAge'](1995));
+*/
+
+
+// const years = new Array(1991,2004,2008,2020);
+
+// const ages = []
+
+// for(let i = 0; i < years.length; i++){
+//      ages.push(2023 - years[i]) 
+// }
+
+// console.log(ages);
+
+// const student=[
+
+// "firstName",
+// "lastName",
+// "age",
+// "does",
+// ['vilas','ajay', 'jay']
+// ]
+// console.log(student.length);
+//  for (let i = student.length -1; i >=0; i--){
+// console.log(i, student[i]);
+
+//  }
+
+//  for(let exercise = 1; exercise < 5; exercise++){
+//     console.log(`=====Starting exercise ${exercise}===============`);
+
+//     for(let rep = 1; rep <= 5; rep++){
+//         console.log(`Exercise ${exercise}: Lifing weights repetion ${rep}`);
+//     }
+//  }
+
+// stopp the loop when dice is 6
+// let dice = Math.trunc(Math.random() * 6) +1;
+// // console.log(dice);
+
+// while(dice !== 6){
+//     console.log(`Dice printed number is not 6 but its ${dice}`);
+//     dice = Math.trunc(Math.random() * 6) +1;
+//     if (dice === 6){
+//         console.log('Loop is ending value 6');    }
+// }
+
