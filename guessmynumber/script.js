@@ -15,10 +15,15 @@ let finalNumber =  Math.floor(Math.random() * 20) + 1;
 
 let score = 20;
 
+const displayMessage = function(message){
+    document.querySelector('.message').textContent = message
+}
+
 document.querySelector('.again').addEventListener('click', function(){
     score = 20
-    document.querySelector('.message').textContent = 'Start Guessing...';
-    finalNumber =  Math.floor(Math.random() * 20) + 1;
+   // document.querySelector('.message').textContent = 'Start Guessing...';
+   displayMessage('Start Guessing...') 
+   finalNumber =  Math.floor(Math.random() * 20) + 1;
     document.querySelector('.guess').value = '';
     document.querySelector('.score').textContent = score;
     document.querySelector('.number').textContent = '?';
@@ -32,29 +37,39 @@ document.querySelector('.check').addEventListener('click', function() {
    console.log(typeof guessValue);
 
    if (!guessValue){
-   document.querySelector('.message').textContent = 'No number entered'
-   } else if (guessValue < finalNumber){
-    if (score > 0){
-        document.querySelector('.message').textContent = 'too Low';
-        score--;
-        document.querySelector('.score').textContent = score;
-    }else{
-        document.querySelector('.message').textContent = `You Lost the game.. the number was ${finalNumber}`; 
-        document.querySelector('.number').textContent = finalNumber;
-    }
+//    document.querySelector('.message').textContent = 'No number entered'
+displayMessage('No number entered')
+   } else if (guessValue !== finalNumber){
+    // document.querySelector('.message').textContent = guessValue > finalNumber ? 'too High' :'too Low';
+    displayMessage(guessValue > finalNumber ? 'too High' :'too Low')
+    score--;
+    document.querySelector('.score').textContent = score;
+   }
    
-   }else if (guessValue > finalNumber){
-    if (score > 0){
-        document.querySelector('.message').textContent = 'too High';
-        score--;
-        document.querySelector('.score').textContent = score;
-    }else{
-        document.querySelector('.message').textContent = `You Lost the game.. the number was ${finalNumber}`; 
-        document.querySelector('.number').textContent = finalNumber;
-    }
+//    else if (guessValue < finalNumber){
+//     if (score > 1){
+//         document.querySelector('.message').textContent = 'too Low';
+//         score--;
+//         document.querySelector('.score').textContent = score;
+//     }else{
+//         document.querySelector('.message').textContent = `You Lost the game.. the number was ${finalNumber}`; 
+//         document.querySelector('.number').textContent = finalNumber;
+//     }
    
-}else {
-    document.querySelector('.message').textContent = 'You won !!!'
+//    }else if (guessValue > finalNumber){
+//     if (score > 1){
+//         document.querySelector('.message').textContent = 'too High';
+//         score--;
+//         document.querySelector('.score').textContent = score;
+//     }else{
+//         document.querySelector('.message').textContent = `You Lost the game.. the number was ${finalNumber}`; 
+//         document.querySelector('.number').textContent = finalNumber;
+//     }
+   
+//}
+else {
+    // document.querySelector('.message').textContent = 'You won !!!'
+    displayMessage('You won!! Correct Number')
     score = score +2;
     document.querySelector('.number').textContent = finalNumber;
     document.querySelector('.score').textContent = score;
