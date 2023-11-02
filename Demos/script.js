@@ -578,3 +578,34 @@ const data1 = [17, 21 ,23]
 
 // const tempStr = printForcast2(data1);
 // console.log(tempStr);
+
+
+// scope
+
+// let myName = 'ajit';
+
+// function first(){
+
+//     const age = 30;
+
+//     if (age >= 30){
+//         const decade = 3;
+//         var millenial = true;
+//     }
+
+
+// function second(){
+//     const job = 'student';
+
+//     console.log('====================================');
+//     console.log(`${myName} is a ${age} old ${job}`);
+//     console.log('====================================');
+// }
+
+// second()
+
+// }
+
+// first();
+
+
