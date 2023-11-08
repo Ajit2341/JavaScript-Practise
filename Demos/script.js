@@ -553,7 +553,7 @@ console.log(calcTempAmplitude(temperture))
 
 // console.log(calcTempAmplitude(temperture,tempertureNew))
 
-const data1 = [17, 21 ,23]
+// const data1 = [17, 21 ,23]
 
 // const printForcast = function(arr){
 
@@ -608,4 +608,24 @@ const data1 = [17, 21 ,23]
 
 // first();
 
+/*
+const Car = function(make, speed){
+    this.make = make;
+    this.speed = speed;
+}
 
+Car.prototype.accelerate = function(){
+    this.speed = this.speed + 10;
+    console.log(`${this.make} car speed after acceleration is ${this.speed}`);
+}
+Car.prototype.brake = function(){
+    this.speed = this.speed - 5;
+    console.log(this.speed);
+}
+
+const BMW = new Car("Racecar", 100)
+const Mercedes = new Car("Sportscar", 400)
+
+BMW.accelerate()
+
+*/
