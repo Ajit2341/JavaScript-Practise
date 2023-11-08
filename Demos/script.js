@@ -671,6 +671,10 @@ console.log(Ram.__proto__);
 console.log('====================================');
 */
 
+
+
+/*
+
 // getters and setters
 
 const account = {
@@ -724,3 +728,14 @@ console.log(Ram.caAge);
 PersonCls.hey();
 // Ram.hey(); //script.js:725 Uncaught TypeError: Ram.hey is not a function
 // static method are not available to the instances of the class eg=> Ram is instance of PersonCl
+
+*/
+
+
+// object.create
+
+const personProto = {
+    calcAge(){
+        return 2023 - this.birthYear;
+    }
+}
