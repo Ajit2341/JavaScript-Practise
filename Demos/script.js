@@ -639,7 +639,7 @@ BMW.accelerate()
 // }
 
 // class normal
-
+/*
 class PersonCls {
     constructor(firstName, lastName, birthYear){
         this.firstName = firstName;
@@ -654,3 +654,19 @@ class PersonCls {
 
 const Ram = new PersonCls("Ram","Yadav", 1990);
 Ram.calcAge();
+
+PersonCls.prototype.greet = function (){
+    console.log(`Hi from prototype method is => ${this.firstName}`);
+}
+console.log('====================================');
+console.log('Classes are not hoisted');
+console.log('====================================');
+Ram.greet();
+
+console.log('====================================');
+console.log(PersonCls.prototype === Ram.__proto__);
+console.log('====================================');
+console.log('====================================');
+console.log(Ram.__proto__);
+console.log('====================================');
+*/
