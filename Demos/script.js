@@ -670,3 +670,57 @@ console.log('====================================');
 console.log(Ram.__proto__);
 console.log('====================================');
 */
+
+// getters and setters
+
+const account = {
+    owner: 'AJit',
+    movements: [100,200,300,400],
+
+get latest(){
+    return this.movements.slice(-2).pop();
+},
+set latest(move){
+    return this.movements.push(move);
+},
+set latestatFirst(money){
+    return this.movements.unshift(money)
+}
+}
+console.log(account.lastest);
+account.latest = 800
+console.log(account.movements);
+account.latestatFirst = 600
+console.log(account.movements);
+
+
+// classes ctr get and set
+
+class PersonCls {
+    constructor(firstName, lastName, birthYear){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.birthYear = birthYear;
+    }
+
+    calcAge(){
+        console.log(`${this.firstName} age is => ${2022 - this.birthYear}`);
+    }
+
+    get caAge(){
+        return 2023 - this.birthYear;
+    }
+
+    static hey(){
+       console.log("Hey there");
+       console.log(this); 
+    }
+}
+
+const Ram = new PersonCls("Ram","Yadav", 1990);
+Ram.calcAge();
+
+console.log(Ram.caAge);
+PersonCls.hey();
+// Ram.hey(); //script.js:725 Uncaught TypeError: Ram.hey is not a function
+// static method are not available to the instances of the class eg=> Ram is instance of PersonCl
