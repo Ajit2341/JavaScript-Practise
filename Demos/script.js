@@ -629,3 +629,28 @@ const Mercedes = new Car("Sportscar", 400)
 BMW.accelerate()
 
 */
+
+// ES6 Classes
+
+// class by function declaration
+
+// const PersonCls = class {
+
+// }
+
+// class normal
+
+class PersonCls {
+    constructor(firstName, lastName, birthYear){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.birthYear = birthYear;
+    }
+
+    calcAge(){
+        console.log(`${this.firstName} age is => ${2022 - this.birthYear}`);
+    }
+}
+
+const Ram = new PersonCls("Ram","Yadav", 1990);
+Ram.calcAge();
